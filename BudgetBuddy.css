@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 
+/* Light mode css */
+
 html{
     scroll-behavior: smooth;
     scroll-padding-top : 100px;
 }
+
 * {
     margin: 0;
     padding: 0;
@@ -50,11 +53,12 @@ body {
     gap: 15px;
 }
 
-.nav-links p{
+.nav-links a{
     margin : 0px;
     cursor : pointer;
-    font-weight: 500;
+    font-weight: 700;
     color : black;
+    text-decoration: none;
 }
 
 .nav-links button{
@@ -131,20 +135,6 @@ body {
     width : 300px;
     margin: 20px auto;
     text-align: center;
-}
-
-#home_1 h5, #home_2 h5, #home_3 h5 {
-    background-color:black;
-    color: white;
-    padding: 12px 20px;
-    display: inline-block;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-#home_1 h5:hover, #home_2 h5:hover, #home_3 h5:hover {
-    background-color: #357ab8;
 }
 
 .About {
@@ -229,11 +219,6 @@ body {
 #box h1 {
     margin: 10px 0;
     font-size: 24px;
-}
-
-#box h3 {
-    margin: 10px 0;
-    color: #555;
 }
 
 .store-buttons {
@@ -619,7 +604,6 @@ button:hover {
     margin-bottom: 20px;
 }
 
-
 @media (max-width: 768px) {
     #UpperBar {
         flex-direction: column;
@@ -634,3 +618,89 @@ button:hover {
         padding: 20px;
     }
 }
+
+/* DARK MODE CSS */
+.dark-mode{
+    background-color: #192A3C;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.dark-mode #UpperBar{
+    background : linear-gradient(120deg, #245b47, #223546);
+}
+
+.dark-mode #themeToggle{
+    background-color: #245b47;
+}
+
+.dark-mode .nav-links a {
+    color : white;
+}
+
+.dark-mode #LogIn, .dark-mode #SignUp_01{
+    border : 1px solid white;
+    background-color: #245b47;
+    color : white;
+}
+
+.dark-mode .nav-links button:hover{
+    background: linear-gradient(120deg, #245b47, #223546);
+}
+
+.dark-mode #UpperBar button:hover {
+    background-color: #223546;
+}
+
+.dark-mode #Middle h2, .dark-mode #Middle h3, .dark-mode #one, .dark-mode #two{
+    color:white;
+}
+
+.dark-mode .About{
+    background-color: #245b47 ;
+}
+
+.dark-mode #description{
+    color : white;
+}
+
+.dark-mode #SignUp_02 {
+    background-color: #245b47;;
+    color: white;
+}
+
+.dark-mode #SignUp_02:hover {
+    background : linear-gradient(120deg, #245b47, #223546);
+}
+
+.dark-mode #SignUp_03{
+    background: linear-gradient(120deg, #245b47, #223546) ;
+    color: white;
+    box-shadow:0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode #SignUp_03:hover {
+    background-color: #224942;
+}
+
+.dark-mode #picture_01{
+    background: url('level_darkBG.png') no-repeat center;
+}
+
+.dark-mode .feature-links p{
+    color : white;
+}
+
+.dark-mode .feature-links p:hover {
+    background-color: rgba(74,144,226,0.1);
+    color : white;
+}
+
+.dark-mode #box{
+    background: #245b47;
+}
+
+.dark-mode #box h4{
+    color : white;
+}
+
