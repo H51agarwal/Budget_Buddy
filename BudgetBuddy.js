@@ -4,6 +4,14 @@ document.getElementById("SignUp_03").addEventListener("click", function () {
     window.location.href = "signUp.html";
 });
 
+document.getElementById("SignUp_01").addEventListener("click", function(){
+    window.location.href = "signUp.html";
+});
+
+document.getElementById("SignUp_02").addEventListener("click", function(){
+    window.location.href = "signUp.html";
+});
+
 // Light-dark mode switching
 
 const themeToggle = document.getElementById("themeToggle");

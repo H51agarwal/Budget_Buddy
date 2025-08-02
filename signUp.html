@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Sign Up</title>
+  <head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+  </head>
   <style>
     body {
       font-family: 'Segoe UI', sans-serif;
@@ -27,10 +28,12 @@
     }
     input {
       width: 100%;
-      padding: 12px;
-      margin: 10px 0;
+      display : block;
+      margin-bottom: 20px;
       border: 1px solid #ccc;
       border-radius: 8px;
+      padding : 10px;
+      margin-right : 2%;
     }
     button {
       width: 100%;
@@ -46,15 +49,44 @@
     button:hover {
       background-color: #0056b3;
     }
+
+    /* dark-mode css */
+    .dark-mode{
+      background-color: #192a3c;
+      color : #ffffff;
+    }
+    .dark-mode input,
+    .dark-mode textarea,
+    .dark-mode select {
+      background-color: #223546;
+      color: #ffffff;
+      border: 1px solid #245B47;
+    }
+    .dark-mode h2{
+      color : white;
+    }
+    .dark-mode form{
+      background: linear-gradient(120deg,#245b47, #223546 );
+    }
+    .dark-mode button{
+      background-color: #245b47;
+    }
+    .dark-mode button:hover{
+      background-color:#175941 ;
+    }
   </style>
-</head>
-<body>
-  <h2>Create Your Account</h2>
-  <form>
-    <input type="text" placeholder="Full Name" required />
-    <input type="email" placeholder="Email Address" required />
-    <input type="password" placeholder="Password" required />
-    <button type="submit">Register</button>
-  </form>
-</body>
+  <body>
+      <h2>Create Your Account</h2>
+      <form>
+        <input type="text" placeholder="Full Name" required />
+        <input type="email" placeholder="Email Address" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Register</button>
+      </form>
+  </body>
+  <script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+  </script>
 </html>
