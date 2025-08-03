@@ -12,6 +12,12 @@ document.getElementById("SignUp_02").addEventListener("click", function(){
     window.location.href = "signUp.html";
 });
 
+// Login Page
+
+document.getElementById("LogIn").addEventListener("click", function(){
+    window.location.href = "LogIn.html";
+});
+
 // Light-dark mode switching
 
 const themeToggle = document.getElementById("themeToggle");

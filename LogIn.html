@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* Light-mode CSS */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: 'Segoe UI', sans-serif;
+    }
+    body{
+        background: linear-gradient(135deg, #3aa1ff, #78ffd6);
+        color : black;
+    }
+    .container{
+        display : flex;
+        min-height: 100vh;
+    }
+    .left-panel{
+        flex : 1;
+        background-color:white ;
+        padding : 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .left-panel h2{
+        font-size: 32px;
+        margin-bottom: 15px;
+    }
+    .left-panel p{
+        margin-bottom: 20px;
+        color : black;
+    }
+    .social-icons{
+        display: flex;
+        gap : 15px;
+        margin-bottom: 25px;
+    }
+    .social-icons button{
+        padding : 10px 16px;
+        border : none;
+        border-radius: 50%;
+        font-size: 18px;
+        color : white;
+        cursor : pointer;
+    }
+    .seperator{
+        text-align: center;
+        margin : 20px 0px;
+        position :relative;
+    }
+    .separator::before,
+    .separator::after {
+        content: '';
+        height: 1px;
+        width: 45%;
+        position: absolute;
+        top: 50%;
+    }
+    .separator::before {
+        left: 0;
+    }
+    .separator::after {
+        right: 0;
+    }
+    .separator span {
+        padding: 0 10px;
+        color: white;
+        font-size: 14px;
+    }
+    .fb{
+        background-color: #3b5998;
+    }
+    .g{
+        background-color:  #db4a39;
+    }
+    .in{
+        background-color: #0077b5;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    form input {
+        padding: 12px;
+        border: 1px solid #3aa1ff;
+        border-radius: 8px;
+        color: black;
+    }
+    form input::placeholder {
+        color: grey;
+    }
+    .sign-in-btn {
+        background: linear-gradient(135deg, #3aa1ff, #78ffd6);
+        color: black;
+        border: none;
+        padding: 12px;
+        border-radius: 25px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+    .sign-in-btn:hover {
+        background-color: #4a95da;
+    }
+    .right-panel {
+        flex: 1;
+        background: linear-gradient(to bottom right, );
+        color: black;
+        padding: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .right-panel h2 {
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .right-panel p {
+        margin-bottom: 25px;
+        font-size: 16px;
+        max-width: 300px;
+    }
+    .sign-up-btn {
+        padding: 12px 30px;
+        border: none;
+        border-radius: 25px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: box-shadow 0.3s;
+    }
+    .sign-up-btn:hover {
+        box-shadow: 0 4px 12px rgba();
+    }
+    /* Dark-mode CSS */
+    .dark-mode body{
+
+        background-color: #192a3c;
+        color : #fff;
+    }
+    .dark-mode .left-panel{
+        background-color: #192a3c;
+    }
+    .dark-mode .left-panel p{
+        color : #ccc;
+    }
+    .dark-mode .social-icons button{
+        color : #fff;
+    }
+    .dark-mode .fb{
+        background-color: #3b5998;
+    }
+    .dark-mode .g{
+        background-color:  #db4a39;
+    }
+    .dark-mode .in{
+        background-color: #0077b5;
+    }
+    .dark-mode .separator::before, .dark-mode .separator::after{
+        background: #444;
+    }
+    .dark-mode .seperator span{
+        color : #aaa;
+    }
+    .dark-mode form input{
+        background-color: #223546;
+        color : #fff;
+    }
+    .dark-mode form input::placeholder{
+        color : #aaa;
+    }
+    .dark-mode .sign-in-btn{
+        background-color: #245b47;
+        color: white;
+    }
+    .dark-mode .sign-in-btn:hover{
+        background-color: #0d3a32;
+    }
+    .dark-mode .right-panel{
+        background: linear-gradient(to bottom right, #245B47, #224942);
+        color: white;
+    }
+    .dark-mode .sign-up-btn{
+        background-color: white;
+        color : #224942;
+    }
+    .dark-mode .sign-up-btn:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="left-panel">
+            <h2>Login to Your Account</h2>
+            <p>Login using social networks</p>
+            <div class="social-icons">
+                <button class="fb">f</button>
+                <button class="g">G+</button>
+                <button class="in">in</button>
+            </div>
+            <div class="separator"><span>OR</span></div>
+            <form>
+                <input type="email" placeholder="Email" required />
+                <input type="password" placeholder="Password" required />
+                <button type="submit" class="sign-in-btn">Sign In</button>
+            </form>
+        </div>
+        <div class="right-panel">
+            <h2>New Here?</h2>
+            <p>Sign up and discover a great amount of new opportunities!</p>
+            <a href="signup.html"><button class="sign-up-btn">Sign Up</button></a>
+        </div>
+    </div>
+</body>
+<script>
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark-mode");
+    }
+</script>
+</html>
